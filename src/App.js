@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import Radium, { StyleRoot } from 'radium';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/main.css';
+import 'react-responsive-carousel/lib/styles/carousel.css';
 
 import logo from './logo.svg';
 import './App.css';
@@ -8,6 +11,10 @@ const device = {
   phone: '@media only screen and (max-width: 40em)',
   laptop: '@media only screen and (min-width: 1224px)',
 };
+
+const purpleFlower = 'https://static.wixstatic.com/media/ea71bb_4afe88d84e374fb293ca75499f61ca11~mv2_d_1463_1253_s_2.png/v1/fill/w_51,h_40,al_c,usm_0.66_1.00_0.01/ea71bb_4afe88d84e374fb293ca75499f61ca11~mv2_d_1463_1253_s_2.png';
+
+const goldenFlower = 'https://static.wixstatic.com/media/ea71bb_51664b73722446b18b9b4f81331b280f~mv2.png/v1/fill/w_60,h_52,al_c,usm_0.66_1.00_0.01/ea71bb_51664b73722446b18b9b4f81331b280f~mv2.png';
 
 const whiteFlower = 'https://static.wixstatic.com/media/ea71bb_c30b7a5e4fba45ba823a8fde134905d3~mv2.png/v1/fill/w_60,h_69,al_c,usm_0.66_1.00_0.01/ea71bb_c30b7a5e4fba45ba823a8fde134905d3~mv2.png';
 
@@ -40,74 +47,81 @@ class Content extends Component {
     return (
         <div style={styles.container}>
           <div style={styles.invitation}>
+            <div style={styles.names}>
+              <img src={floral} style={{position: 'absolute', top: 0, left: 15, width: 300,  }}/>
+              <img src={fernLeaf} style={{position: 'absolute', top: 80, left: -10, resizeMode: 'contain', width: 90, transform: 'rotate(50deg) scaleX(-1)'}}/>
+              <img src={fernLeaf} style={{position: 'absolute', top: 80, right: -10, resizeMode: 'contain', width: 90, transform: 'rotate(-40deg)'}}/>
+              <img src={fernLeaf} style={{position: 'absolute', bottom: 75, right: 10, resizeMode: 'contain', width: 90, zIndex: 20}}/>
+              <img src={bigWhiteFlower} style={{position: 'absolute', bottom: 80, right: 10, resizeMode: 'contain', width: 50, zIndex: 21}}/>
+              <img src={chembaruthi} style={{position: 'absolute', top: 75, left: -20, resizeMode: 'contain', width: 50, zIndex: 20}}/>
+              <img src={bigRedFlower} style={{position: 'absolute', top: -5, left: -10, resizeMode: 'contain', width: 100, zIndex: 20}}/>
+              <img src={whiteFlower} style={{position: 'absolute', top: 150, left: 20, resizeMode: 'contain', width: 50, transform: 'rotate(-20deg)'}}/>
+              <img src={redFlower} style={{position: 'absolute', top: 140, left: 100, resizeMode: 'contain', width: 55, zIndex: 21}}/>
+              <img src={leaf1} style={{position: 'absolute', top: 150, left: 70, resizeMode: 'contain', width: 50, zIndex: 20, transform: 'scaleX(-1)'}}/>
+              <img src={leaf2} style={{position: 'absolute', top: 50, left: 70, resizeMode: 'contain', width: 50, zIndex: 20, transform: 'rotate(70deg) scaleX(-1)'}}/>
+              <img src={leaf3} style={{position: 'absolute', top: 50, left: 200, resizeMode: 'contain', width: 50, zIndex: 20, transform: 'rotate(90deg) scaleX(-1)'}}/>
+              <img src={bud1} style={{position: 'absolute', top: 125, left: 200, resizeMode: 'contain', width: 20, zIndex: 20, transform: 'rotate(90deg) scaleX(-1)'}}/>
+              <img src={bud1} style={{position: 'absolute', top: 185, left: 180, resizeMode: 'contain', width: 25, zIndex: 20, transform: 'rotate(0deg) scaleX(-1)'}}/>
+              <img src={leaf2} style={{position: 'absolute', top: 130, left: -10, resizeMode: 'contain', width: 40, transform: 'rotate(-40deg) scaleX(-1)'}}/>
 
-        <div style={styles.names}>
-          <img src={floral} style={{position: 'absolute', top: 0, left: 15, width: 300,  }}/>
+                <div style={styles.her}>
+                  <p style={styles.name}>SREELAKSHMY</p>
+                </div>
 
-        <img src={fernLeaf} style={{position: 'absolute', top: 80, left: -10, resizeMode: 'contain', width: 90, transform: 'rotate(50deg) scaleX(-1)'}}/>
-
-        <img src={fernLeaf} style={{position: 'absolute', top: 80, right: -10, resizeMode: 'contain', width: 90, transform: 'rotate(-40deg)'}}/>
-
-        <img src={fernLeaf} style={{position: 'absolute', bottom: 75, right: 10, resizeMode: 'contain', width: 90, zIndex: 20}}/>
-
-        <img src={bigWhiteFlower} style={{position: 'absolute', bottom: 80, right: 10, resizeMode: 'contain', width: 50, zIndex: 21}}/>
-
-        <img src={chembaruthi} style={{position: 'absolute', top: 75, left: -20, resizeMode: 'contain', width: 50, zIndex: 20}}/>
-
-        <img src={bigRedFlower} style={{position: 'absolute', top: -5, left: -10, resizeMode: 'contain', width: 100, zIndex: 20}}/>
-
-        <img src={whiteFlower} style={{position: 'absolute', top: 150, left: 20, resizeMode: 'contain', width: 50, transform: 'rotate(-20deg)'}}/>
-
-        <img src={redFlower} style={{position: 'absolute', top: 140, left: 100, resizeMode: 'contain', width: 55, zIndex: 21}}/>
-
-        <img src={leaf1} style={{position: 'absolute', top: 150, left: 70, resizeMode: 'contain', width: 50, zIndex: 20, transform: 'scaleX(-1)'}}/>
-
-        <img src={leaf2} style={{position: 'absolute', top: 50, left: 70, resizeMode: 'contain', width: 50, zIndex: 20, transform: 'rotate(70deg) scaleX(-1)'}}/>
-
-        <img src={leaf3} style={{position: 'absolute', top: 50, left: 200, resizeMode: 'contain', width: 50, zIndex: 20, transform: 'rotate(90deg) scaleX(-1)'}}/>
-
-        <img src={bud1} style={{position: 'absolute', top: 125, left: 200, resizeMode: 'contain', width: 20, zIndex: 20, transform: 'rotate(90deg) scaleX(-1)'}}/>
-
-        <img src={bud1} style={{position: 'absolute', top: 185, left: 180, resizeMode: 'contain', width: 25, zIndex: 20, transform: 'rotate(0deg) scaleX(-1)'}}/>
-
-        <img src={leaf2} style={{position: 'absolute', top: 130, left: -10, resizeMode: 'contain', width: 40, transform: 'rotate(-40deg) scaleX(-1)'}}/>
-
-            <div style={styles.her}>
-              <p style={styles.name}>SREELAKSHMY</p>
+                <div style={styles.his}>
+                  <p style={styles.name}>SREEJITH</p>
+                </div>
             </div>
 
-            <div style={styles.his}>
-              <p style={styles.name}>SREEJITH</p>
+            <div style={styles.card}>
+              <img src={purpleFlower} style={{width: 30, height: 30}} />
+              <p style={styles.cardCaption}>Getting Married</p>
+
+              <div style={styles.cardDetails}>
+                <div style={styles.cardDate}>
+                  <p style={styles.subText}>January 7-8, 2018</p>
+                </div>
+
+                <div style={styles.cardVenue}>
+                  <p style={styles.cardVenueText}>Parvathi Kalyana Mandapam</p>
+                  <p style={styles.cardVenueText}>Surya Resmi Convention Center</p>
+                </div>
+              </div>
+
+              <div style={styles.rsvp}>
+                <button type="button" style={styles.button} className="btn btn-success">RSVP</button>
             </div>
-        </div>
 
-            <p style={styles.subText}>JAN 7-8, 2018</p>
+            <p style={styles.buttonSubText}>(Get notified when the photos come out!)</p>
+              </div>
+          </div>
 
-            <p style={styles.subText}>Parvathi Kalyana Mandapam</p>
-
-            <div style={styles.rsvp}>
-              <button type="button" className="btn btn-success">RSVP</button>
+          <div style={styles.photos}>
+            <div style={styles.carouselContainer}>
+              <Carousel infiniteLoop={true} showArrows={false} showThumbs={false} showStatus={false} autoPlay={true}>
+                <div><img style={styles.photo} src="http://192.168.1.6:8000/train.jpg"/></div>
+                <div><img style={styles.photo} src="http://192.168.1.6:8000/train.jpg"/></div>
+              </Carousel>
             </div>
-
           </div>
 
           <div style={styles.reach}>
-            <h3>Where?</h3>
-            <div style={styles.events}>
-              <div style={styles.marriage}>
-                <img src="http://192.168.1.8:8000/Nirapara3.png" style={styles.eventChiclet}/>
-                <div style={styles.eventGradient}></div>
-                <span style={styles.eventTitle}><h4>Marriage</h4></span>
-              </div>
-              <div style={styles.reception}>
-                <img src="http://192.168.1.8:8000/photoid42.jpg" style={styles.eventChiclet}/>
-                <div style={styles.eventGradient}></div>
-                <span style={styles.eventTitle}><h4>Reception</h4></span>
-              </div>
-            </div>
+            <h3 style={styles.sectionHeader}>Reaching There</h3>
           </div>
         </div>
     );
+            //     <div style={styles.events}>
+            //   <div style={styles.marriage}>
+            //     <img src="http://192.168.1.6:8000/Nirapara3.png" ostyle={styles.eventChiclet}/>
+            //     <div style={styles.eventGradient}></div>
+            //     <span style={styles.eventTitle}><h4>Marriage</h4></span>
+            //   </div>
+            //   <div style={styles.reception}>
+            //     <img src="http://192.168.1.6:8000/photoid42.jpg" style={styles.eventChiclet}/>
+            //     <div style={styles.eventGradient}></div>
+            //     <span style={styles.eventTitle}><h4>Reception</h4></span>
+            //   </div>
+            // </div>
   }
 }
 
@@ -129,7 +143,6 @@ const styles = {
     },
 
     [device.laptop]: {
-      width: 800,
     },
   },
   invitation: {
@@ -139,21 +152,29 @@ const styles = {
       alignItems: 'center',
       justifyContent: 'center',
       height: '100vh',
-//      backgroundColor: 'white',
+//      backgroundColor: '#ceb4ff',
 //      backgroundColor: 'rgb(214, 187, 110)',
+      boxShadow: '1px 1px 2px rgba(0, 0, 0, 0.3)',
       backgroundColor: 'rgb(244, 192, 175)',
     },
     [device.laptop]: {
-      backgroundColor: 'green'
+      display: 'flex',
+      height: '100vh',
+      backgroundColor: 'rgb(244, 192, 175)',
+//      boxShadow: '2px 2px 2px rgba(0, 0, 0, 0.3)',
+      margin: '0 auto',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
     },
   },
   names: {
     position: 'relative',
-    width: 300,
-    height: 350,
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
+    width: 300 * 1,
+    height: 350 * 1,
+    // display: 'flex',
+    // flexDirection: 'column',
+    // justifyContent: 'center',
   },
   her: {
     display: 'flex',
@@ -184,7 +205,7 @@ const styles = {
     resizeMode: 'contain',
   },
   name: {
-    fontSize: 45,
+    fontSize: 45 * 0.9,
     fontWeight: 'bold',
     fontFamily: '"Helvetica", sans-serif',
     color: 'white',
@@ -239,11 +260,146 @@ const styles = {
     left: 0,
   },
   subText: {
-    color: '#163e3a',
-    fontWeight: 'bold',
+    marginBottom: 5,
+    color: 'black',
+    fontSize: 16,
     borderBottom: '2px solid white',
-    fontFamily: '"Monteserrat", sans-serif',
+    fontFamily: '"Crimson Text", sans-serif',
   },
+  cardCaption: {
+    color: 'black',
+//    color: '#222222',
+    fontWeight: 'bold',
+    fontSize: 22,
+    marginBottom: 5,
+    borderBottom: '2px solid white',
+    fontFamily: '"Crimson Text", sans-serif',
+  },
+  cardVenueText: {
+    marginTop: 0,
+    marginBottom: 0,
+    color: 'black',
+    fontSize: 16,
+    borderBottom: '2px solid white',
+    fontFamily: '"Crimson Text", sans-serif',
+  },
+  card: {
+    [device.phone]: {
+      backgroundColor: 'white',
+      boxShadow: '2px 4px 10px rgba(0, 0, 0, 0.3)',
+      marginTop: 0,
+      padding: 10,
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      marginBottom: 20,
+      width: '80vw',
+    },
+    [device.laptop]: {
+      backgroundColor: 'white',
+      boxShadow: '2px 4px 10px rgba(0, 0, 0, 0.3)',
+      marginTop: 20,
+      padding: 20,
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      marginBottom: 20,
+      width: '35em',
+    },
+  },
+  cardDate: {
+    [device.phone]: {
+      borderBottom: '1px solid #888',
+      textAlign: 'center',
+    },
+    [device.laptop]: {
+      borderRight: '1px solid #888',
+      paddingRight: 20,
+      width: '15em',
+      display: 'flex',
+      justifyContent: 'flex-end',
+      alignItems: 'center',
+    },
+  },
+  cardVenue: {
+    [device.laptop]: {
+      paddingTop: 5,
+      paddingBottom: 15,
+      paddingLeft: 20,
+      width: '15em',
+    },
+    [device.phone]: {
+      paddingTop: 5,
+      paddingBottom: 10,
+      textAlign: 'center',
+    },
+  },
+  cardDetails: {
+    [device.laptop]: {
+      display: 'flex',
+      flexDirection: 'row',
+      marginTop: 10,
+      marginBottom: 10,
+    },
+    [device.phone]: {
+    }
+  },
+  button: {
+    borderRadius: 20,
+    backgroundColor: '#00cc00',
+    borderColor: '#00cc00',
+    paddingLeft: 30,
+    paddingRight: 30,
+  },
+  buttonSubText: {
+    fontSize: 14,
+    fontFamily: '"Crimson Text", sans-serif',
+    marginBottom: 0,
+  },
+  reach: {
+    [device.laptop]: {
+      padding: 20,
+      width: '35em',
+      margin: '0 auto',
+      textAlign: 'center',
+    },
+    [device.phone]: {
+      padding: 10,
+    },
+  },
+  sectionHeader: {
+    fontSize: 30,
+    fontFamily: '"Crimson Text", sans-serif',
+    borderBottom: '1px solid #222',
+  },
+  photos: {
+    [device.laptop]: {
+      backgroundColor: 'rgb(244, 192, 175)',
+      paddingBottom: 40,
+    },
+    [device.phone]: {
+      padding: 0
+    }
+  },
+  carouselContainer: {
+    [device.laptop]: {
+      margin: '0 auto',
+      width: '35em',
+      boxShadow: '2px 4px 10px rgba(0, 0, 0, 0.3)',
+    },
+    [device.phone]: {
+      width: '100vw',
+      boxShadow: '2px 4px 10px rgba(0, 0, 0, 0.3)',
+    }
+  },
+  photo: {
+    [device.phone]: {
+      maxWidth: '100vw',
+    },
+    [device.laptop]: {
+      maxWidth: '35em',
+    }
+  }
 };
 
 export default App;
