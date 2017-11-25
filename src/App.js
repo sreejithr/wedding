@@ -106,7 +106,23 @@ class Content extends Component {
           </div>
 
           <div style={styles.reach}>
-            <h3 style={styles.sectionHeader}>Reaching There</h3>
+            <div style={styles.section}>
+              <h3 style={styles.sectionHeader}>Wedding</h3>
+              <p>10.30 AM - 11.00 AM</p>
+              <p>Sunday, 7th January 2018</p>
+              <p><b>Parvathy Kalyana Mandapam</b></p>
+              <p>Palakkad, Kerala</p>
+              <iframe frameborder="0" style={styles.map}
+src="https://www.google.com/maps/embed/v1/search?q=parvathi+kalyana+palakkad&key= AIzaSyCCcXUdXCHYynGXOman9Sp3rjBQ-jdjNgg" allowfullscreen></iframe>
+            </div>
+            <div style={styles.section}>
+              <h3 style={styles.sectionHeader}>Reception</h3>
+              <p>5.00 PM - 8.00 AM</p>
+              <p>Monday, 8th January 2018</p>
+              <p><b>Surya Resmi Convention Center</b></p>
+              <p>Palakkad, Kerala</p>
+              <iframe frameborder="0" style={styles.map} src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJVTPWQ-VtqDsRMmHU1wonj5M&key=AIzaSyCCcXUdXCHYynGXOman9Sp3rjBQ-jdjNgg" allowfullscreen></iframe>
+            </div>
           </div>
         </div>
     );
@@ -359,9 +375,10 @@ const styles = {
   reach: {
     [device.laptop]: {
       padding: 20,
-      width: '35em',
       margin: '0 auto',
       textAlign: 'center',
+      display: 'flex',
+      justifyContent: 'center',
     },
     [device.phone]: {
       padding: 10,
@@ -370,7 +387,7 @@ const styles = {
   sectionHeader: {
     fontSize: 30,
     fontFamily: '"Crimson Text", sans-serif',
-    borderBottom: '1px solid #222',
+    //borderBottom: '1px solid #222',
   },
   photos: {
     [device.laptop]: {
@@ -399,7 +416,17 @@ const styles = {
     [device.laptop]: {
       maxWidth: '35em',
     }
-  }
+  },
+  map: {
+    width: "23em",
+    height: "23em",
+    borderWidth: 0,
+  },
+  section: {
+    [device.laptop]: {
+      width: '25em',
+    }
+  },
 };
 
 export default App;
