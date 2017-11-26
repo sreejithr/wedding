@@ -2,6 +2,7 @@
   "name": "wedding",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://sreejithr.github.io/wedding/",
   "dependencies": {
     "radium": "^0.19.6",
     "react": "^16.0.0",
@@ -15,6 +16,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   }
 }
