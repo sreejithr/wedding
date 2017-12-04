@@ -99,8 +99,12 @@ class Content extends Component {
           <div style={styles.photos}>
             <div style={styles.carouselContainer}>
               <Carousel infiniteLoop={true} showArrows={false} showThumbs={false} showStatus={false} autoPlay={true}>
-                <div><img style={styles.photo} src="http://192.168.1.6:8000/train.jpg"/></div>
-                <div><img style={styles.photo} src="http://192.168.1.6:8000/train.jpg"/></div>
+                <div><img style={styles.photo} src={require('./IMG_0340.jpg')}/></div>
+                <div><img style={styles.photo} src={require('./IMG_0439.jpg')}/></div>
+                <div><img style={styles.photo} src={require('./IMG_0368.jpg')}/></div>
+                <div><img style={styles.photo} src={require('./IMG_0366.jpg')}/></div>
+                <div><img style={styles.photo} src={require('./IMG-20171204-WA0014.jpg')}/></div>
+                <div><img style={styles.photo} src={require('./IMG-20171204-WA0016.jpg')}/></div>
               </Carousel>
             </div>
           </div>
@@ -126,18 +130,6 @@ src="https://www.google.com/maps/embed/v1/search?q=parvathi+kalyana+palakkad&key
           </div>
         </div>
     );
-            //     <div style={styles.events}>
-            //   <div style={styles.marriage}>
-            //     <img src="http://192.168.1.6:8000/Nirapara3.png" ostyle={styles.eventChiclet}/>
-            //     <div style={styles.eventGradient}></div>
-            //     <span style={styles.eventTitle}><h4>Marriage</h4></span>
-            //   </div>
-            //   <div style={styles.reception}>
-            //     <img src="http://192.168.1.6:8000/photoid42.jpg" style={styles.eventChiclet}/>
-            //     <div style={styles.eventGradient}></div>
-            //     <span style={styles.eventTitle}><h4>Reception</h4></span>
-            //   </div>
-            // </div>
   }
 }
 
@@ -396,7 +388,7 @@ const styles = {
     },
     [device.phone]: {
       padding: 0
-    }
+    },
   },
   carouselContainer: {
     [device.laptop]: {
@@ -411,16 +403,26 @@ const styles = {
   },
   photo: {
     [device.phone]: {
+      height: '40vh',
       maxWidth: '100vw',
     },
     [device.laptop]: {
+      height: '20.35em',
       maxWidth: '35em',
+      resizeMode: 'cover',
     }
   },
   map: {
-    width: "23em",
-    height: "23em",
-    borderWidth: 0,
+    [device.laptop]: {
+      width: "23em",
+      height: "23em",
+      borderWidth: 0,
+    },
+    [device.phone]: {
+      width: '90vw',
+      height: '70vh',
+      borderWidth: 0,
+    }
   },
   section: {
     [device.laptop]: {
